@@ -55,6 +55,9 @@ def require_update(update_log_path):
 def update_smd_in_list(stock_data_cptr_list, smd_dir, force_update=False):
     update_log_path = smd_dir + "/update.log"
 
+    if not os.path.exists(smd_dir ):
+        os.makedirs(smd_dir)
+
     error = 0
     if require_update(update_log_path) or force_update:
         for stock_data_cptr in stock_data_cptr_list:

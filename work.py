@@ -1,4 +1,5 @@
 import stock
+import os
 
 listed_sid_path = "listed.sid"
 trade_data_dir = "smd"
@@ -44,6 +45,9 @@ def init(display_func):
 
     work_arr = stock.init_work_arr(listed_list)
     logger.logp("Init: OK\n")
+
+    if not os.path.exists("imgopt"):
+        os.makedirs("imgopt")
 
 
 if __name__ == '__main__':
