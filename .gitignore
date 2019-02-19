@@ -1,0 +1,17 @@
+*.o
+*.tmp
+*.js
+*.log
+*.sid
+
+*__pycache__
+
+smd
+dtd
+.idea
+results
+imgopt
+
+stock/c_api/*.dll
+stock/c_api/*.so
+stock/c_api/src/swig_gen
